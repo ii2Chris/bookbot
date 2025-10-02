@@ -14,3 +14,12 @@ def get_chars_dict(text):
         else:
             chars[lowered] = 1
     return chars
+
+def sort_on(item):
+    return item[1]
+
+def sort_chars(chars):
+    items = list(chars.items())
+    
+    sorted_items = sorted(items, key=sort_on, reverse=True)
+    return sorted_items
